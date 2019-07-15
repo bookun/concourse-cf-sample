@@ -20,6 +20,7 @@ jobs:
   public: true
   plan:
   - get: resource-web-app
+    trigger: true
   - task: build
     file: resource-web-app/tasks/build.yml
   - put: resource-deploy-web-app
