@@ -22,7 +22,7 @@ jobs:
   - get: resource-web-app
     trigger: true
   - task: build
-    file: resource-web-app/tasks/build.yml
+    file: resource-web-app/ci/tasks/build.yml
   - put: resource-deploy-web-app
     params:
       manifest: built/manifest.yml
