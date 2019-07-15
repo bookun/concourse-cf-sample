@@ -1,9 +1,9 @@
----
 resources:
 - name: resource-web-app
   type: git
   source:
     uri: https://github.com/bookun/concourse-cf-sample.git
+    branch: hoge
 
 - name: resource-deploy-web-app
   type: cf
@@ -13,11 +13,13 @@ resources:
     password: ((password))
     organization: ((organization))
     space: ((space))
+    verbose: true
     skip_cert_check: false
 
 jobs:
 - name: job-deploy-app
   public: true
+  serial: true
   plan:
   - get: resource-web-app
     trigger: true
@@ -26,4 +28,5 @@ jobs:
   - put: resource-deploy-web-app
     params:
       manifest: built/manifest.yml
-      current_app_name: cf-sample
+      path: built
+      current-app-name: cf-sample

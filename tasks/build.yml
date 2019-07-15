@@ -9,9 +9,13 @@ image_resource:
 inputs:
   - name: resource-web-app
 
-caches:
-  - path: resource-web-app/vendor
-
+    #caches:
+    #  - path: resource-web-app/vendor
+    #
+    #params:
+    #  GOOS: linux
+    #  GOARCH: amd64
+    #
 outputs:
   - name: built
 
