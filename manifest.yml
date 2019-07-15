@@ -1,0 +1,8 @@
+applications:
+- name: cf-sample
+  instances: 1
+  buildpack: https://github.com/cloudfoundry/binary-buildpack.git
+  command: ./cf-sample
+  env:
+    TZ: Asia/Tokyo
+    LANG: ja_JP.UTF-8
