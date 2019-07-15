@@ -2,11 +2,13 @@
 resources:
 - name: resource-web-app
   type: git
+  icon: github-circle
   source:
     uri: https://github.com/bookun/concourse-cf-sample.git
 
 - name: resource-deploy-web-app
   type: cf
+  icon: cloud
   source:
     api: ((api))
     username: ((username))
