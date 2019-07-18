@@ -2,10 +2,7 @@
 applications:
 - name: cf-sample
   instances: 1
-  buildpacks:
-  - binary_buildpack
-  routes:
-  - route: cf-sample.ms10.cf001.goo.ne.jp
+  buildpack: binary_buildpack
   command: "./cf-sample"
   env:
     TZ: Asia/Tokyo

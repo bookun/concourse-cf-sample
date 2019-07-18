@@ -29,4 +29,4 @@ jobs:
     params:
       manifest: built/manifest.yml
       path: built
-      current-app-name: cf-sample
+      current_app_name: cf-sample
